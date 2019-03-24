@@ -24,8 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.pictureBoxGrid = new System.Windows.Forms.PictureBox();
-            this.richOneM = new System.Windows.Forms.RichTextBox();
-            this.richOneB = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +47,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textOneM = new System.Windows.Forms.TextBox();
+            this.textOneB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -65,27 +65,11 @@
             this.pictureBoxGrid.TabIndex = 0;
             this.pictureBoxGrid.TabStop = false;
             // 
-            // richOneM
-            // 
-            this.richOneM.Location = new System.Drawing.Point(145, 148);
-            this.richOneM.Name = "richOneM";
-            this.richOneM.Size = new System.Drawing.Size(40, 39);
-            this.richOneM.TabIndex = 2;
-            this.richOneM.Text = "";
-            // 
-            // richOneB
-            // 
-            this.richOneB.Location = new System.Drawing.Point(285, 148);
-            this.richOneB.Name = "richOneB";
-            this.richOneB.Size = new System.Drawing.Size(40, 39);
-            this.richOneB.TabIndex = 3;
-            this.richOneB.Text = "";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 148);
+            this.label1.Location = new System.Drawing.Point(85, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 39);
             this.label1.TabIndex = 1;
@@ -95,7 +79,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(201, 148);
+            this.label2.Location = new System.Drawing.Point(278, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 39);
             this.label2.TabIndex = 4;
@@ -105,7 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 148);
+            this.label3.Location = new System.Drawing.Point(43, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 39);
             this.label3.TabIndex = 5;
@@ -115,7 +99,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Red;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(364, 148);
+            this.pictureBox2.Location = new System.Drawing.Point(489, 148);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 39);
             this.pictureBox2.TabIndex = 6;
@@ -294,7 +278,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(455, 148);
+            this.button1.Location = new System.Drawing.Point(558, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 39);
             this.button1.TabIndex = 25;
@@ -302,12 +286,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonLinearCalculate);
             // 
+            // textOneM
+            // 
+            this.textOneM.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textOneM.Location = new System.Drawing.Point(158, 152);
+            this.textOneM.Name = "textOneM";
+            this.textOneM.Size = new System.Drawing.Size(107, 35);
+            this.textOneM.TabIndex = 26;
+            this.textOneM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textOneM_KeyPress);
+            // 
+            // textOneB
+            // 
+            this.textOneB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textOneB.Location = new System.Drawing.Point(351, 152);
+            this.textOneB.Name = "textOneB";
+            this.textOneB.Size = new System.Drawing.Size(107, 35);
+            this.textOneB.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1363, 707);
+            this.Controls.Add(this.textOneB);
+            this.Controls.Add(this.textOneM);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label10);
@@ -330,8 +333,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richOneB);
-            this.Controls.Add(this.richOneM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxGrid);
             this.ForeColor = System.Drawing.Color.White;
@@ -351,8 +352,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxGrid;
-        private System.Windows.Forms.RichTextBox richOneM;
-        private System.Windows.Forms.RichTextBox richOneB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -376,6 +375,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textOneM;
+        private System.Windows.Forms.TextBox textOneB;
     }
 }
 
