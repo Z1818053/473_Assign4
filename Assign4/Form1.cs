@@ -48,13 +48,13 @@ namespace Assign4 {
             // Get how many ticks need to be drawn on positive X-axis.
             int amountOfTicksPosX = xMax / xInterval;
 
-            // Get how many ticks need to be drawn on positive X-axis.
+            // Get how many ticks need to be drawn on negative X-axis.
             int amountOfTicksNegX = xMin / xInterval;
 
             // Determine how many pixels between ticks on the positive X-axis.
             int pixelsBetweenTicksPosX = halfWidth / amountOfTicksPosX;
 
-            // Determine how many pixels between ticks on the positive X-axis.
+            // Determine how many pixels between ticks on the negative X-axis.
             int pixelsBetweenTicksNegX = halfWidth / amountOfTicksNegX;
 
 
