@@ -48,8 +48,6 @@ namespace Assign4 {
             // Determine how many pixels between ticks.
             int pixelsBetweenTicks = halfWidth / amountOfTicks;
 
-            //MessageBox.Show(pixelsBetweenTicks.ToString());
-
             // Draw each tick mark on the positive X-axis.
             for (int i = 0; i <= amountOfTicks; i++) {
                     g.DrawLine(pen, halfWidth + (i * pixelsBetweenTicks), halfHeight + 3, halfWidth + (i * pixelsBetweenTicks), halfHeight - 3);
@@ -65,21 +63,10 @@ namespace Assign4 {
                 g.DrawLine(pen, halfWidth + 3, halfHeight - (i * pixelsBetweenTicks), halfWidth - 3, halfHeight - (i * pixelsBetweenTicks));
             }
 
-            // Draw each tick mark on the positive Y-axis.
+            // Draw each tick mark on the negative Y-axis.
             for (int i = 0; i <= amountOfTicks; i++) {
                 g.DrawLine(pen, halfWidth + 3, halfHeight + (i * pixelsBetweenTicks), halfWidth - 3, halfHeight + (i * pixelsBetweenTicks));
             }
-
-            // Draw each tick mark.
-            /*
-            for (int i = 0; i <= amountOfTicks; i += xInterval) {
-                if (i % xInterval == 0) {
-                    
-
-                    g.DrawLine(pen, halfWidth + i, halfHeight + 3, halfWidth + i, halfHeight - 3);
-                }
-            }
-            */
         }
 
         private void Form1_Load(object sender, EventArgs e) {
