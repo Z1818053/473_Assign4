@@ -59,9 +59,9 @@
             // pictureBoxGrid
             // 
             this.pictureBoxGrid.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBoxGrid.Location = new System.Drawing.Point(713, 76);
+            this.pictureBoxGrid.Location = new System.Drawing.Point(712, 46);
             this.pictureBoxGrid.Name = "pictureBoxGrid";
-            this.pictureBoxGrid.Size = new System.Drawing.Size(619, 515);
+            this.pictureBoxGrid.Size = new System.Drawing.Size(620, 620);
             this.pictureBoxGrid.TabIndex = 0;
             this.pictureBoxGrid.TabStop = false;
             // 
